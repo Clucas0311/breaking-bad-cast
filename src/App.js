@@ -18,7 +18,10 @@ const App = () => {
         `https://www.breakingbadapi.com/api/characters`
       );
 
-      console.log(result.data);
+      // update the fetched characters to the setCharacter updated state func
+      // set is loading to false
+      setCharacters(result.data);
+      setIsLoading(false);
     };
     // we needed to call the function we used to fetch our characters
     fetchCharacters();
